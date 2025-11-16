@@ -13,36 +13,46 @@
 <head>
     <meta charset="UTF-8">
     <title>글 작성 결과</title>
-    <style>
-        body { font-family: Arial, sans-serif; background:#f4f4f4; }
-        .container { width:700px; margin:30px auto; background:#fff; padding:20px 30px;
-            border-radius:8px; box-shadow:0 0 8px rgba(0,0,0,0.1); }
-        h1 { text-align:center; margin-bottom:20px; }
-        .row { margin-bottom:8px; }
-        .label { font-weight:bold; display:inline-block; width:100px; }
-        pre { white-space:pre-wrap; border:1px solid #ddd; padding:10px; border-radius:4px; }
-        .btn-area { text-align:center; margin-top:20px; }
-        a { text-decoration:none; padding:8px 14px; border-radius:4px; color:#fff; background:#5c7cfa; }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
-<body>
-<div class="container">
-    <h1>글 작성 완료 (write_ok.jsp)</h1>
+<body class="bg-light">
+<div class="container py-5">
+    <div class="card shadow-sm mx-auto" style="max-width: 720px;">
+        <div class="card-body">
+            <h1 class="h4 text-center mb-4">글 작성 완료 (write_ok.jsp)</h1>
 
-    <div class="row"><span class="label">글번호</span> <%= id %></div>
-    <div class="row"><span class="label">제목</span> <%= title %></div>
-    <div class="row"><span class="label">작성자</span> <%= writer %></div>
-    <div class="row"><span class="label">카테고리</span> <%= category %></div>
-    <div class="row"><span class="label">작성일</span> <%= date %></div>
+            <dl class="row mb-0">
+                <dt class="col-sm-3">글번호</dt>
+                <dd class="col-sm-9 text-body-secondary"><%= id %></dd>
 
-    <div class="row">
-        <span class="label">내용</span>
-        <pre><%= content %></pre>
-    </div>
+                <dt class="col-sm-3">제목</dt>
+                <dd class="col-sm-9 text-body-secondary"><%= title %></dd>
 
-    <div class="btn-area">
-        <a href="list.jsp">목록으로</a>
+                <dt class="col-sm-3">작성자</dt>
+                <dd class="col-sm-9 text-body-secondary"><%= writer %></dd>
+
+                <dt class="col-sm-3">카테고리</dt>
+                <dd class="col-sm-9 text-body-secondary"><%= category %></dd>
+
+                <dt class="col-sm-3">작성일</dt>
+                <dd class="col-sm-9 text-body-secondary"><%= date %></dd>
+            </dl>
+
+            <div class="mt-4">
+                <span class="fw-semibold text-secondary d-block mb-2">내용</span>
+                <pre class="form-control bg-light"><%= content %></pre>
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="list.jsp" class="btn btn-primary">목록으로</a>
+            </div>
+        </div>
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 </html>

@@ -4,86 +4,86 @@
 <head>
     <meta charset="UTF-8">
     <title>게시판 목록</title>
-    <style>
-        body { font-family: Arial, sans-serif; background: #f4f4f4; }
-        .container { width: 900px; margin: 30px auto; background: #fff; padding: 20px 30px;
-            border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,0.1); }
-        h1 { text-align:center; margin-bottom:20px; }
-        table { width:100%; border-collapse:collapse; }
-        th, td { border:1px solid #ddd; padding:8px; text-align:center; }
-        th { background:#f1f3f5; }
-        .top-bar { display:flex; justify-content:space-between; margin-bottom:10px; }
-        .btn { display:inline-block; padding:6px 12px; border-radius:4px; text-decoration:none;
-            background:#5c7cfa; color:#fff; font-size:13px; }
-        .btn-view { background:#20c997; }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
-<body>
-<div class="container">
-    <h1>게시판 목록 (Mock)</h1>
+<body class="bg-light">
+<div class="container py-5">
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-3 gap-2">
+                <div>
+                    <h1 class="h4 mb-1">게시판 목록 (Mock)</h1>
+                    <div class="text-muted">총 게시글 수: 5</div>
+                </div>
+                <!-- 새글작성 클릭 → write.html -->
+                <a href="write.html" class="btn btn-primary">새 글 작성</a>
+            </div>
 
-    <div class="top-bar">
-        <div>총 게시글 수: 5</div>
-        <!-- 새글작성 클릭 → write.html -->
-        <a href="write.html" class="btn">새 글 작성</a>
+            <div class="table-responsive">
+                <table class="table table-striped table-hover align-middle text-center">
+                    <thead class="table-light">
+                    <tr>
+                        <th scope="col">번호</th>
+                        <th scope="col">제목</th>
+                        <th scope="col">작성자</th>
+                        <th scope="col">카테고리</th>
+                        <th scope="col">작성일</th>
+                        <th scope="col">상세보기</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td class="text-start">JSP CRUD 프로젝트 안내</td>
+                        <td>관리자</td>
+                        <td><span class="badge bg-primary-subtle text-primary-emphasis">공지</span></td>
+                        <td>2025-11-16</td>
+                        <td>
+                            <a href="view.jsp?id=1" class="btn btn-outline-success btn-sm">보기</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="text-start">웹 프론트엔드 Mock 데이터 테스트</td>
+                        <td>홍길동</td>
+                        <td><span class="badge bg-info-subtle text-info-emphasis">자유</span></td>
+                        <td>2025-11-15</td>
+                        <td><a href="view.jsp?id=2" class="btn btn-outline-success btn-sm">보기</a></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td class="text-start">Railway / Render 배포 관련</td>
+                        <td>김영희</td>
+                        <td><span class="badge bg-warning-subtle text-warning-emphasis">질문</span></td>
+                        <td>2025-11-14</td>
+                        <td><a href="view.jsp?id=3" class="btn btn-outline-success btn-sm">보기</a></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td class="text-start">테스트 게시글</td>
+                        <td>김원겸</td>
+                        <td><span class="badge bg-warning-subtle text-warning-emphasis">질문</span></td>
+                        <td>2025-11-11</td>
+                        <td><a href="view.jsp?id=4" class="btn btn-outline-success btn-sm">보기</a></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td class="text-start">상품 목록 확인하기 게시글</td>
+                        <td>오늘의 할 일</td>
+                        <td><span class="badge bg-warning-subtle text-warning-emphasis">질문</span></td>
+                        <td>2025-11-16</td>
+                        <td><a href="view.jsp?id=5" class="btn btn-outline-success btn-sm">보기</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
-
-    <table>
-        <tr>
-            <th>번호</th>
-            <th>제목</th>
-            <th>작성자</th>
-            <th>카테고리</th>
-            <th>작성일</th>
-            <th>상세보기</th>
-        </tr>
-        <!-- Mock Data 1 -->
-        <tr>
-            <td>1</td>
-            <td>JSP CRUD 프로젝트 안내</td>
-            <td>관리자</td>
-            <td>공지</td>
-            <td>2025-11-16</td>
-            <td>
-                <!-- 상세보기 → view.jsp?id=1 -->
-                <a href="view.jsp?id=1" class="btn btn-view">보기</a>
-            </td>
-        </tr>
-        <!-- Mock Data 2 -->
-        <tr>
-            <td>2</td>
-            <td>웹 프론트엔드 Mock 데이터 테스트</td>
-            <td>홍길동</td>
-            <td>자유</td>
-            <td>2025-11-15</td>
-            <td><a href="view.jsp?id=2" class="btn btn-view">보기</a></td>
-        </tr>
-        <!-- Mock Data 3 -->
-        <tr>
-            <td>3</td>
-            <td>Railway / Render 배포 관련</td>
-            <td>김영희</td>
-            <td>질문</td>
-            <td>2025-11-14</td>
-            <td><a href="view.jsp?id=3" class="btn btn-view">보기</a></td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>테스트 게시글</td>
-            <td>김원겸</td>
-            <td>질문</td>
-            <td>2025-11-11</td>
-            <td><a href="view.jsp?id=4" class="btn btn-view">보기</a></td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>상품 목록 확인하기 게시글</td>
-            <td>오늘의 할 일</td>
-            <td>질문</td>
-            <td>2025-11-16</td>
-            <td><a href="view.jsp?id=5" class="btn btn-view">보기</a></td>
-        </tr>
-    </table>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 </html>

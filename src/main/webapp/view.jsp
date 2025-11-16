@@ -9,60 +9,51 @@
 <head>
     <meta charset="UTF-8">
     <title>게시글 상세보기</title>
-    <style>
-        body { font-family: Arial, sans-serif; background:#f4f4f4; }
-        .container { width: 800px; margin:30px auto; background:#fff; padding:20px 30px;
-            border-radius:8px; box-shadow:0 0 8px rgba(0,0,0,0.1); }
-        h1 { text-align:center; margin-bottom:20px; }
-        .row { margin-bottom:10px; }
-        .label { font-weight:bold; display:inline-block; width:100px; }
-        .content-box { border:1px solid #ddd; padding:10px; min-height:120px; border-radius:4px; }
-        .btn-area { text-align:center; margin-top:20px; }
-        .btn { display:inline-block; padding:8px 14px; margin:0 4px; border-radius:4px;
-            text-decoration:none; color:#fff; font-size:13px; }
-        .btn-edit { background:#5c7cfa; }
-        .btn-delete { background:#fa5252; }
-        .btn-list { background:#868e96; }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
-<body>
-<div class="container">
-    <h1>게시글 상세보기 (ID: <%= id %>)</h1>
+<body class="bg-light">
+<div class="container py-5">
+    <div class="card shadow-sm mx-auto" style="max-width: 800px;">
+        <div class="card-body">
+            <h1 class="h4 text-center mb-4">게시글 상세보기 (ID: <%= id %>)</h1>
 
-    <div class="row">
-        <span class="label">제목</span>
-        <span>JSP CRUD 예시 게시글</span>
-    </div>
-    <div class="row">
-        <span class="label">작성자</span>
-        <span>관리자</span>
-    </div>
-    <div class="row">
-        <span class="label">카테고리</span>
-        <span>공지</span>
-    </div>
-    <div class="row">
-        <span class="label">작성일</span>
-        <span>2025-11-16</span>
-    </div>
-    <div class="row">
-        <span class="label">글번호</span>
-        <span><%= id %></span>
-    </div>
+            <dl class="row">
+                <dt class="col-sm-3">제목</dt>
+                <dd class="col-sm-9 text-body-secondary">JSP CRUD 예시 게시글</dd>
 
-    <div class="row">
-        <span class="label">내용</span>
-        <div class="content-box">
-            내용 예시입니다.<br>
-            아래 버튼을 통해 수정 / 삭제할 수 있습니다.
+                <dt class="col-sm-3">작성자</dt>
+                <dd class="col-sm-9 text-body-secondary">관리자</dd>
+
+                <dt class="col-sm-3">카테고리</dt>
+                <dd class="col-sm-9 text-body-secondary"><span class="badge bg-primary-subtle text-primary-emphasis">공지</span></dd>
+
+                <dt class="col-sm-3">작성일</dt>
+                <dd class="col-sm-9 text-body-secondary">2025-11-16</dd>
+
+                <dt class="col-sm-3">글번호</dt>
+                <dd class="col-sm-9 text-body-secondary"><%= id %></dd>
+            </dl>
+
+            <div class="mt-4">
+                <span class="fw-semibold text-secondary d-block mb-2">내용</span>
+                <div class="border rounded p-3 bg-light-subtle">
+                    내용 예시입니다.<br>
+                    아래 버튼을 통해 수정 / 삭제할 수 있습니다.
+                </div>
+            </div>
+
+            <div class="d-flex flex-wrap justify-content-center gap-2 mt-4">
+                <a href="edit.html?id=<%= id %>" class="btn btn-primary">수정</a>
+                <a href="delete_ok.jsp?id=<%= id %>" class="btn btn-danger">삭제</a>
+                <a href="list.jsp" class="btn btn-outline-secondary">목록</a>
+            </div>
         </div>
     </div>
-
-    <div class="btn-area">
-        <a href="edit.html?id=<%= id %>" class="btn btn-edit">수정</a>
-        <a href="delete_ok.jsp?id=<%= id %>" class="btn btn-delete">삭제</a>
-        <a href="list.jsp" class="btn btn-list">목록</a>
-    </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 </html>
