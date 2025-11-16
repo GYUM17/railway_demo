@@ -23,7 +23,7 @@
     <h1>게시판 목록 (Mock)</h1>
 
     <div class="top-bar">
-        <div>총 게시글 수: 3 (Mock)</div>
+        <div>총 게시글 수: 5</div>
         <!-- 새글작성 클릭 → write.html -->
         <a href="write.html" class="btn">새 글 작성</a>
     </div>
@@ -66,6 +66,22 @@
             <td>질문</td>
             <td>2025-11-14</td>
             <td><a href="view.jsp?id=3" class="btn btn-view">보기</a></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>테스트 게시글</td>
+            <td>김원겸</td>
+            <td>질문</td>
+            <td>2025-11-11</td>
+            <td><a href="view.jsp?id=4" class="btn btn-view">보기</a></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>상품 목록 확인하기 게시글</td>
+            <td>오늘의 할 일</td>
+            <td>질문</td>
+            <td>2025-11-16</td>
+            <td><a href="view.jsp?id=5" class="btn btn-view">보기</a></td>
         </tr>
     </table>
 </div>

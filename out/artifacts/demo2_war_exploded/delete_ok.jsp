@@ -19,7 +19,8 @@
 <body>
 <div class="container">
     <h1>삭제 완료 (delete_ok.jsp)</h1>
-    <p>글번호 <strong><%= id %></strong> 가 삭제되었습니다. (Mock)</p>
+    <p>글번호 <strong><%= id %></strong> 가 삭제되었다고 가정합니다. (Mock)</p>
+    <p>실제 DB 연동 없이, 삭제 흐름만 확인하는 페이지입니다.</p>
     <a href="list.jsp">목록으로</a>
 </div>
 </body>
