@@ -24,7 +24,7 @@
 <div class="top-bar">
     <div>총 게시글 수: 5 (Mock)</div>
     <!-- Add 버튼 (글쓰기 페이지로 이동) -->
-    <a class="button" href="write.jsp">글 작성 (Add)</a>
+    <a class="button" href="write.html">글 작성 (Add)</a>
 </div>
 
 <table>

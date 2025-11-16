@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>글 작성하기</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 6px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        textarea {
+            height: 120px;
+        }
+        .btn-area {
+            text-align: center;
+        }
+        button, .btn-back {
+            padding: 10px 20px;
+            border: none;
+            background-color: #5c7cfa;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+        .btn-back {
+            background-color: #777;
+            text-decoration: none;
+        }
+        button:hover {
+            background-color: #4c6ef5;
+        }
+        .btn-back:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>새 글 작성</h2>
+
+    <!-- write_ok.jsp로 데이터 전송 -->
+    <form action="write_ok.jsp" method="post">
+
+        <label>제목</label>
+        <input type="text" name="title" placeholder="제목을 입력하세요" required>
+
+        <label>작성자</label>
+        <input type="text" name="writer" placeholder="이름을 입력하세요" required>
+
+        <label>카테고리</label>
+        <select name="category">
+            <option value="공지사항">공지사항</option>
+            <option value="자유게시판">자유게시판</option>
+            <option value="질문게시판">질문게시판</option>
+            <option value="자료실">자료실</option>
+        </select>
+
+        <label>내용</label>
+        <textarea name="content" placeholder="내용을 입력하세요"></textarea>
+
+        <label>비밀번호</label>
+        <input type="text" name="password" placeholder="수정/삭제용 비밀번호" required>
+
+        <div class="btn-area">
+            <button type="submit">등록</button>
+            <a href="list.html" class="btn-back">뒤로가기</a>
+        </div>
+    </form>
+
+</div>
+
+</body>
+</html>
