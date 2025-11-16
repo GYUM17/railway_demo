@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>새 글 작성</title>
+    <style>
+        body { font-family: Arial, sans-serif; background:#f4f4f4; }
+        .container { width:700px; margin:30px auto; background:#fff; padding:20px 30px;
+            border-radius:8px; box-shadow:0 0 8px rgba(0,0,0,0.1); }
+        h1 { text-align:center; margin-bottom:20px; }
+        label { font-weight:bold; display:block; margin-top:10px; }
+        input[type="text"], input[type="date"], textarea, select {
+            width:100%; padding:8px; margin-top:4px; border:1px solid #ccc; border-radius:4px;
+        }
+        textarea { height:140px; }
+        .btn-area { text-align:center; margin-top:20px; }
+        button, .btn-back {
+            padding:8px 16px; border:none; border-radius:4px; cursor:pointer;
+            text-decoration:none; font-size:14px;
+        }
+        button { background:#5c7cfa; color:#fff; }
+        .btn-back { background:#868e96; color:#fff; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>새 글 작성</h1>
+
+    <!-- 저장 클릭 → write_ok.jsp -->
+    <form action="write_ok.jsp" method="post">
+        <label>제목</label>
+        <input type="text" name="title" required>
+
+        <label>작성자</label>
+        <input type="text" name="writer" required>
+
+        <label>카테고리</label>
+        <select name="category">
+            <option value="공지">공지</option>
+            <option value="자유">자유</option>
+            <option value="질문">질문</option>
+            <option value="기타">기타</option>
+        </select>
+
+        <label>작성일</label>
+        <input type="date" name="date">
+
+        <label>내용</label>
+        <textarea name="content"></textarea>
+
+        <input type="hidden" name="id" value="999">
+
+        <div class="btn-area">
+            <button type="submit">저장</button>
+            <a href="list.jsp" class="btn-back">취소(목록)</a>
+        </div>
+    </form>
+</div>
+</body>
+</html>
